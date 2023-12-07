@@ -5,6 +5,8 @@ export class ExcelComponent extends DOMListener {
         super($root, options.listeners);
         this.name = options.name || ''
         this.emitter = options.emitter
+        this.subscribe = options.subscribe || []
+        this.store = options.store
         this.unsubscribers = []
 
         this.prepare()
@@ -20,10 +22,20 @@ export class ExcelComponent extends DOMListener {
         this.unsubscribers.push(unsub)
     }
 
+    $dispatch(action) {
+        this.store.dispatch(action)
+    }
+
     prepare() {}
 
     toHTML() {
         return ''
+    }
+
+    isWatching(key) {
+        // console.log('Ключ в сабскайберах', key)
+        // Все ок, такой ключ есть в сабах Тулбара.
+        return this.subscribe.includes(key)
     }
 
     init() {
