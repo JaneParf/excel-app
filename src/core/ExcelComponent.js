@@ -33,8 +33,6 @@ export class ExcelComponent extends DOMListener {
     }
 
     isWatching(key) {
-        // console.log('Ключ в сабскайберах', key)
-        // Все ок, такой ключ есть в сабах Тулбара.
         return this.subscribe.includes(key)
     }
 

@@ -35,11 +35,7 @@ export class Toolbar extends ExcelStateComponent {
         $target.$el.classList.toggle('active')
         if ($target.data.type === 'button') {
             const value = JSON.parse($target.data.value)
-            // const key = Object.keys(value)[0]
             this.$emit('toolbar:applyStyle', value)
-            // console.log('value', value)
-            // Здесь эмитится стиль согласно нажатой кнопке
-            // this.setState({[key]: value[key]})
         }
     }
 }
