@@ -10,7 +10,9 @@ export class CreateStore {
         this.listeners.push(fn)
         return {
             unsubscribe() {
-                this.listeners = this.listeners.filter(l => l !== fn)
+                if (this.listeners) {
+                    this.listeners = this.listeners.filter(l => l !== fn)
+                }
             }
         }
     }
