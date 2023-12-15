@@ -3,7 +3,8 @@ import {
     CHANGE_STYLES,
     CHANGE_TEXT,
     SAVE_HEADER,
-    TABLE_RESIZE
+    TABLE_RESIZE,
+    UPDATE_DATE
 } from "./types";
 
 export function rootReducer(state, action) {
@@ -41,6 +42,12 @@ export function rootReducer(state, action) {
                 [field]: action.data
             }
         default: return state
+        case UPDATE_DATE:
+            field = 'lastOpened'
+            return {
+                ...state,
+                [field]: new Date().toJSON()
+            }
     }
 }
 

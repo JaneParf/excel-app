@@ -6,7 +6,6 @@ export class ExcelStateComponent extends ExcelComponent {
     }
 
     get template() {
-        console.log('this.state', this.state)
         return JSON.stringify(this.state, null, 2)
     }
 

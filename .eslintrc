@@ -15,6 +15,7 @@
     "quotes": "off",
     "no-trailing-spaces": "off",
     "operator-linebreak": "off",
+    "eol-last": "off"
   },
   "extends": "google"
 }
