@@ -1,4 +1,3 @@
-import {defaultTitle} from "@/constants";
 import {storage} from "@core/utils";
 
 
