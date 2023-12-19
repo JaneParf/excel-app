@@ -17,5 +17,6 @@
     "operator-linebreak": "off",
     "eol-last": "off"
   },
-  "extends": "google"
+  "extends": "google",
+  "plugins": ["jest"]
 }
