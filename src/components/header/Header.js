@@ -3,7 +3,7 @@ import {$} from "@core/dom";
 import * as actions from "@/redux/actions";
 import {ExcelStateComponent} from "@core/ExcelStateComponent";
 import {debounce, deleteFromStorage} from "@core/utils";
-import {storageName} from "@/pages/ExcelPage";
+import {storageName} from "@/shared/LocalStorageClient";
 import {ActiveRoute} from "@core/routes/ActiveRoute";
 
 export class Header extends ExcelStateComponent {
